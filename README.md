@@ -1,9 +1,9 @@
-#Graphics UI 
+# Graphics UI 
 
 This is a template application for generic UI for displaying graphics.
 It would automatically draw itself depending on the config and data model.
 
-##Configuration
+## Configuration
 
 To configure tabs which should be displayed you can use file
 
