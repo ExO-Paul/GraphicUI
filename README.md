@@ -1,4 +1,53 @@
-# AngularApp
+#Graphics UI 
+
+This is a template application for generic UI for displaying graphics.
+It would automatically draw itself depending on the config and data model.
+
+##Configuration
+
+To configure tabs which should be displayed you can use file
+
+ `src/app/config/endpoints.ts`
+ 
+ Each tab has:
+ 
+ `tabName` - the label used for tab
+ 
+ `apiUrl` - the URL of the back-end service corresponding to the tab
+ 
+ `route` - the Angular 2 Route class holding mapping for routing (you can see some examples in Angular 2 reference in chapter routing)
+ 
+ To add another tab you need to add another object to the ENDPOINTS array.
+ 
+## Data API
+
+Currently application expects the following form of data:
+
+```json
+{
+  "xLabel": "string",
+  "yLabel": "string",
+  "points": [
+    {
+      "xValue": 333,
+      "yValue": 222
+    },
+    {
+      "xValue": 444,
+      "yValue": 200
+    }
+  ]
+}
+```
+ 
+ You may change this API by modifying files under  `src/app/model`
+
+## TODOs
+
+- The graphics component is yet to be implemented. It is located under `src/app/graph`.
+- The error handling is now using a simple stub method in the StatsService. It might get a better implementation.
+
+# How to use this Angular app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 

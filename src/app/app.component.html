@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+<nav>
+  <a *ngFor="let endpoint of endpoints" routerLink="{{endpoint.route.path}}" routerLinkActive="active">{{endpoint.tabName}}</a>
+</nav>
+<router-outlet></router-outlet>
