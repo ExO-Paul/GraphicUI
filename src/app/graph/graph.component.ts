@@ -34,34 +34,34 @@ export class GraphComponent implements OnInit {
     },
     responsive: true
   };
-  // public lineChartColors: Array<any> = [
-  //   { // grey
-  //     backgroundColor: 'rgba(148,159,177,0.2)',
-  //     borderColor: 'rgba(148,159,177,1)',
-  //     pointBackgroundColor: 'rgba(148,159,177,1)',
-  //     pointBorderColor: '#fff',
-  //     pointHoverBackgroundColor: '#fff',
-  //     pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-  //   }
-  //   // { // dark grey
-  //   //   backgroundColor: 'rgba(77,83,96,0.2)',
-  //   //   borderColor: 'rgba(77,83,96,1)',
-  //   //   pointBackgroundColor: 'rgba(77,83,96,1)',
-  //   //   pointBorderColor: '#fff',
-  //   //   pointHoverBackgroundColor: '#fff',
-  //   //   pointHoverBorderColor: 'rgba(77,83,96,1)'
-  //   // },
-  //   // { // grey
-  //   //   backgroundColor: 'rgba(148,159,177,0.2)',
-  //   //   borderColor: 'rgba(148,159,177,1)',
-  //   //   pointBackgroundColor: 'rgba(148,159,177,1)',
-  //   //   pointBorderColor: '#fff',
-  //   //   pointHoverBackgroundColor: '#fff',
-  //   //   pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-  //   // }
-  //
-  // ];
-  // public lineChartLegend: boolean = true;
+  public lineChartColors: Array<any> = [
+    // { // grey
+    //   backgroundColor: 'rgba(148,159,177,0.2)',
+    //   borderColor: 'rgba(148,159,177,1)',
+    //   pointBackgroundColor: 'rgba(148,159,177,1)',
+    //   pointBorderColor: '#fff',
+    //   pointHoverBackgroundColor: '#fff',
+    //   pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    // }
+    // { // dark grey
+    //   backgroundColor: 'rgba(77,83,96,0.2)',
+    //   borderColor: 'rgba(77,83,96,1)',
+    //   pointBackgroundColor: 'rgba(77,83,96,1)',
+    //   pointBorderColor: '#fff',
+    //   pointHoverBackgroundColor: '#fff',
+    //   pointHoverBorderColor: 'rgba(77,83,96,1)'
+    // },
+    // { // grey
+    //   backgroundColor: 'rgba(148,159,177,0.2)',
+    //   borderColor: 'rgba(148,159,177,1)',
+    //   pointBackgroundColor: 'rgba(148,159,177,1)',
+    //   pointBorderColor: '#fff',
+    //   pointHoverBackgroundColor: '#fff',
+    //   pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    // }
+
+  ];
+  public lineChartLegend: boolean = true;
   public lineChartType: string = 'line';
 
 
@@ -97,17 +97,18 @@ export class GraphComponent implements OnInit {
     this.lineChartColors.length = 0;
     graphData.data.map((value, index) => {
       console.log(index);
-      console.log(`hsl(${(index + 10) * 10}, 100%, 10%)`);
+      console.log(`hsla(${(index + 10) * 10}, 100%, 10%)`);
       return {
-        backgroundColor: `hsl(${(index + 10) * 10}, 100%, 10%)`,
-        borderColor: `hsl(${index * 10}, 100%, 0%)`,
-        pointBackgroundColor: `hsl(${index * 10}, 100%, 0%)`,
-        pointBorderColor: `hsl(${index * 10}, 100%, 0%)`,
-        pointHoverBackgroundColor: `hsl(${index * 10}, 100%, 50%)`,
-        pointHoverBorderColor: `hsl(${index * 10}, 100%, 50%)`
+        backgroundColor: `hsla(${(index + 1) * 10}, 100%, 10%, 1)`,
+        borderColor: `hsla(${index * 10}, 100%, 0%, 1)`,
+        pointBackgroundColor: `hsla(${index * 10}, 100%, 0%, 1)`,
+        pointBorderColor: `hsla(${index * 10}, 100%, 0%, 1)`,
+        pointHoverBackgroundColor: `hsla(${index * 10}, 100%, 50%, 1)`,
+        pointHoverBorderColor: `hsla(${index * 10}, 100%, 50, 1%)`
       }
     }).forEach(value => this.lineChartColors.push(value))
   }
+
 
   // events
   public chartClicked(e: any): void {
