@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
 
-import {RouterModule, Routes} from "@angular/router";
-import {GraphComponent} from "./graph/graph.component";
-import {ENDPOINTS} from "./config/endpoints";
+import {RouterModule, Routes} from '@angular/router';
+import {ENDPOINTS} from './config/endpoints';
 
 export const ROUTES: Routes = ENDPOINTS.map(endpoint => endpoint.route);
 
@@ -14,4 +13,3 @@ export const ROUTES: Routes = ENDPOINTS.map(endpoint => endpoint.route);
 })
 export class AppRoutingModule {
 }
-

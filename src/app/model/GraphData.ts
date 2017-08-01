@@ -1,7 +1,10 @@
-import {DataPoint} from "./DataPoint";
-
 export class GraphData {
-  xLabel: string;
-  yLabel: string;
-  points: DataPoint[];
+  values: string[];
+  graphName: string;
 }
+
+// export class GraphData {
+//   id: number;
+//   time: number;
+//   lag: number;
+// }
